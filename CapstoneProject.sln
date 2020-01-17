@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneProject.iOS", "Caps
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneProject.UWP", "CapstoneProject\CapstoneProject.UWP\CapstoneProject.UWP.csproj", "{04F23907-BC83-4099-9270-7BA0279A672B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneProject", "CapstoneProject\CapstoneProject\CapstoneProject.csproj", "{B02F5FDF-BC0C-4ECA-B66D-E47FD19E9B06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapstoneProject", "CapstoneProject\CapstoneProject\CapstoneProject.csproj", "{B02F5FDF-BC0C-4ECA-B66D-E47FD19E9B06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
