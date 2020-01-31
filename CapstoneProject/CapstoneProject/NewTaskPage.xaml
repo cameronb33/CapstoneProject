@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapstoneProject.NewTaskPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnList_Clicked"/>
+                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnCalendar_Clicked"/>
+            </StackLayout>
+
+            <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Vertical">
+                <Label Margin="0,0,0,10" Text="New Task" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Margin="0,0,0,10" Text="Name:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="txtName" Placeholder="Enter Task Name"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Margin="0,0,0,10" Text="Date:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="txtDate" Placeholder="Enter Date"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Margin="0,0,0,10" Text="Location:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="txtLocation" Placeholder="Enter Address"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Margin="0,0,0,10" Text="Notes:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="txtNotes" Placeholder="Enter Any Notes"></Entry>
+                </StackLayout>
+
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Label Margin="0,0,0,10" Text="Site Map:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Button x:Name="btnSiteMap" WidthRequest="200" Text="Upload Site Map"/>
+                </StackLayout>
+                
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnSaveTemplate" WidthRequest="200" Text="Save As Template"/>
+                </StackLayout>
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnCreateTask" WidthRequest="200" Text="Create Task"/>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

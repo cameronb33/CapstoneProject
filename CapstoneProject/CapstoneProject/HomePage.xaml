@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapstoneProject.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnList_Clicked"/>
+                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnCalendar_Clicked"/>
+            </StackLayout>
+
+            <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Vertical">
+                <Label Margin="0,0,0,10" Text="Today's Tasks" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                
+                <Button x:Name="btnTask1" WidthRequest="200" Text="Task 1" Clicked="BtnTask_Clicked"/>
+                <Button x:Name="btnTask2" WidthRequest="200" Text="Task 2" Clicked="BtnTask_Clicked"/>
+                <Button x:Name="btnTask3" WidthRequest="200" Text="Task 3" Clicked="BtnTask_Clicked"/>
+                <Button x:Name="btnTask4" WidthRequest="200" Text="Task 4" Clicked="BtnTask_Clicked"/>
+                <Button x:Name="btnTask5" WidthRequest="200" Text="Task 5" Clicked="BtnTask_Clicked"/>
+                <Button x:Name="btnNewTask" WidthRequest="200" Text="New Task" Padding="10" Clicked="BtnNewTask_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapstoneProject.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout Spacing="50">
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnList_Clicked"/>
+                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnCalendar_Clicked"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Margin="0,0,0,10" Text="Name: Worker A" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <Label Margin="0,0,0,10" Text="Username: aWorker1" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+
+                <Entry x:Name="txtNewPass" Placeholder="New Password" IsPassword="true"></Entry>
+                <Entry x:Name="txtNewPassConfirm" Placeholder="Confirm Password" IsPassword="true"></Entry>
+                <Button x:Name="btnResetPassword" WidthRequest="200" Text="Change Password" Clicked="BtnResetPassword_Clicked"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

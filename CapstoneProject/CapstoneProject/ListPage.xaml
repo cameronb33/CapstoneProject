@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapstoneProject.ListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnHome" HorizontalOptions="Center" WidthRequest="200" Text="Home" Clicked="BtnHome_Clicked"/>
+            <Button x:Name="btnCalendar" HorizontalOptions="Center" WidthRequest="200" Text="Calendar" Clicked="BtnCalendar_Clicked"/>
+            <Button x:Name="btnProfile" HorizontalOptions="Center" WidthRequest="200" Text="Profile" Clicked="BtnProfile_Clicked"/>
+            <Button x:Name="btnModUsers" HorizontalOptions="Center" WidthRequest="200" Text="Add/Remove Users" Clicked="BtnModUsers_Clicked"/>
+            <Button x:Name="btnNewTask" HorizontalOptions="Center" WidthRequest="200" Text="New Task" Clicked="BtnNewTask_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

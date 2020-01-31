@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapstoneProject.ModUserPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnList_Clicked"/>
+                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnCalendar_Clicked"/>
+            </StackLayout>
+
+            <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Vertical">
+                <Label Margin="0,0,0,10" Text="New User" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Margin="0,0,0,10" Text="Name:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="txtName" Placeholder="Enter Name"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Margin="0,0,0,10" Text="E-mail:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="txtEmail" Placeholder="Enter E-mail"></Entry>
+                </StackLayout>
+
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnGenUser" WidthRequest="200" Text="Generate User"/>
+                </StackLayout>
+
+                <Label Margin="0,0,0,10" Text="Users" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Margin="0,0,0,10" Text="Worker A" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Button x:Name="btnDelUser" WidthRequest="100" Text="Delete User"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

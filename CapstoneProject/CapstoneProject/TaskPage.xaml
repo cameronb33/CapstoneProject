@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapstoneProject.TaskPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnList_Clicked"/>
+                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnCalendar_Clicked"/>
+            </StackLayout>
+
+            <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Vertical">
+                <Label Margin="0,0,0,10" Text="Task Name" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Entry x:Name="txtStart" Placeholder="Start Time"></Entry>
+                    <Button x:Name="btnStart" WidthRequest="100" Text="Update Start Time"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Entry x:Name="txtEnd" Placeholder="End Time"></Entry>
+                    <Button x:Name="btnEnd" WidthRequest="100" Text="Update End Time"/>
+                </StackLayout>
+
+                <Label Margin="0,0,0,10" Text="Address: 1234 123 St Edmonton, AB" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <Label Margin="0,0,0,10" Text="Notes: " FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <Label Margin="0,0,0,10" Text="Site Map" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <Image Source="imagesitemap.jpg"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

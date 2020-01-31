@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapstoneProject.LoginPage">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Label Margin="0,0,0,10" Text="Login" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+
+                <Entry x:Name="txtUser" Placeholder="Username"></Entry>
+                <Entry x:Name="txtPass" Placeholder="Password" IsPassword="true"></Entry>
+
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnLogin" WidthRequest="200" Text="Login" Clicked="BtnLogin_Clicked"/>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
