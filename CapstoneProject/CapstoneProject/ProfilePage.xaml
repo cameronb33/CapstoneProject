@@ -5,8 +5,8 @@
     <ContentPage.Content>
         <StackLayout Spacing="50">
             <StackLayout Orientation="Horizontal">
-                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnList_Clicked"/>
-                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnCalendar_Clicked"/>
+                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Clicked="BtnList_Clicked" Padding="5,0,0,0" AutomationProperties.IsInAccessibleTree="False" BorderWidth="-1"/>
+                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Clicked="BtnCalendar_Clicked" Padding="0,0,5,0"/>
             </StackLayout>
             
             <StackLayout HorizontalOptions="CenterAndExpand">

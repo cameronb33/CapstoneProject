@@ -5,19 +5,36 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnList_Clicked"/>
+                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Clicked="BtnList_Clicked" Padding="5,0,0,0" AutomationProperties.IsInAccessibleTree="False" BorderWidth="-1"/>
             </StackLayout>
 
             <Image Source="imagecalendar.jpg"/>
 
             <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Vertical">
                 <Label Margin="0,0,0,10" Text="Jan 31 Tasks" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-
-                <Button x:Name="btnTask1" WidthRequest="200" Text="Task 1" Clicked="BtnTask_Clicked"/>
-                <Button x:Name="btnTask2" WidthRequest="200" Text="Task 2" Clicked="BtnTask_Clicked"/>
-                <Button x:Name="btnTask3" WidthRequest="200" Text="Task 3" Clicked="BtnTask_Clicked"/>
-                <Button x:Name="btnTask4" WidthRequest="200" Text="Task 4" Clicked="BtnTask_Clicked"/>
-                <Button x:Name="btnTask5" WidthRequest="200" Text="Task 5" Clicked="BtnTask_Clicked"/>
+                <ListView ItemsSource="{Binding Tasks}"
+                          ItemTapped="BtnTask_Clicked"
+                          HasUnevenRows="True"
+                          WidthRequest="300"
+                          HorizontalOptions="CenterAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Padding="5">
+                                    <StackLayout Orientation="Vertical">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Location}" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                            <Label Text="{Binding Time}" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Workers}" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
 
         </StackLayout>
