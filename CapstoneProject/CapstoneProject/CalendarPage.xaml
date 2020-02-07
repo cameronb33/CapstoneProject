@@ -1,33 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CapstoneProject.CalendarPage">
+             x:Class="CapstoneProject.CalendarPage" BackgroundColor="#FFFFFF">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Clicked="BtnList_Clicked" Padding="5,0,0,0" AutomationProperties.IsInAccessibleTree="False" BorderWidth="-1"/>
-            </StackLayout>
+            <!-- This is the toolbar. To change the page title simply adjust the Label text -->
+            <Frame Padding="6" HeightRequest="35" BackgroundColor="#0192B1">
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="iconlistwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="BtnList_Clicked"/>
+                    <Label Text="Calendar" FontSize="30" HorizontalOptions="CenterAndExpand" TextColor="#FFFFFF"/>
+                    <ImageButton Source="iconcalendarwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="EndAndExpand" Clicked="BtnCalendar_Clicked"/>
+                </StackLayout>
+            </Frame>
 
             <Image Source="imagecalendar.jpg"/>
 
             <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Vertical">
-                <Label Margin="0,0,0,10" Text="Jan 31 Tasks" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <Label Margin="0,0,0,10" Text="Jan 31 Tasks" FontSize="Large" HorizontalTextAlignment="Center" TextColor="#000000" />
                 <ListView ItemsSource="{Binding Tasks}"
                           ItemTapped="BtnTask_Clicked"
                           HasUnevenRows="True"
                           WidthRequest="300"
-                          HorizontalOptions="CenterAndExpand">
+                          HorizontalOptions="CenterAndExpand"
+                          Margin="0,0,0,20">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame Padding="5">
+                                <Frame Margin="0,10,0,10" Padding="5" BackgroundColor="#0192B1" CornerRadius="10">
                                     <StackLayout Orientation="Vertical">
                                         <StackLayout Orientation="Horizontal">
-                                            <Label Text="{Binding Location}" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
-                                            <Label Text="{Binding Time}" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                                            <Label Text="{Binding Location}" FontAttributes="Bold" HorizontalOptions="StartAndExpand" TextColor="#FFFFFF"/>
+                                            <Label Text="{Binding Time}" FontAttributes="Bold" HorizontalOptions="EndAndExpand" TextColor="#FFFFFF"/>
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal">
-                                            <Label Text="{Binding Workers}" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                            <Label Text="{Binding Workers}" FontAttributes="Bold" HorizontalOptions="StartAndExpand" TextColor="#FFFFFF"/>
                                         </StackLayout>
                                     </StackLayout>
                                 </Frame>

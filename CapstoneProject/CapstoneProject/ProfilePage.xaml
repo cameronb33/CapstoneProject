@@ -1,23 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CapstoneProject.ProfilePage">
+             x:Class="CapstoneProject.ProfilePage" BackgroundColor="#FFFFFF">
     <ContentPage.Content>
-        <StackLayout Spacing="50">
-            <StackLayout Orientation="Horizontal">
-                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Clicked="BtnList_Clicked" Padding="5,0,0,0" AutomationProperties.IsInAccessibleTree="False" BorderWidth="-1"/>
-                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Clicked="BtnCalendar_Clicked" Padding="0,0,5,0"/>
-            </StackLayout>
-            
-            <StackLayout HorizontalOptions="CenterAndExpand">
-                <Label Margin="0,0,0,10" Text="Name: Worker A" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-                <Label Margin="0,0,0,10" Text="Username: aWorker1" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+        <StackLayout>
+            <!-- This is the toolbar. To change the page title simply adjust the Label text -->
+            <Frame Padding="6" HeightRequest="35" BackgroundColor="#0192B1" HasShadow="False">
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="iconlistwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="BtnList_Clicked"/>
+                    <Label Text="Profile" FontSize="30" HorizontalOptions="CenterAndExpand" TextColor="#FFFFFF"/>
+                    <ImageButton Source="iconcalendarwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="EndAndExpand" Clicked="BtnCalendar_Clicked"/>
+                </StackLayout>
+            </Frame>
 
-                <Entry x:Name="txtNewPass" Placeholder="New Password" IsPassword="true"></Entry>
-                <Entry x:Name="txtNewPassConfirm" Placeholder="Confirm Password" IsPassword="true"></Entry>
-                <Button x:Name="btnResetPassword" WidthRequest="200" Text="Change Password" Clicked="BtnResetPassword_Clicked"/>
-            </StackLayout>
-            
+            <Frame HasShadow="False">
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Name:" FontSize="Large" TextColor="Gray" ></Label>
+                        <Label Text="Worker A" FontSize="Large" TextColor="Black"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Username:" FontSize="Large" TextColor="Gray"></Label>
+                        <Label Text="aWorker1" FontSize="Large" TextColor="Black"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame HasShadow="False">
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Entry x:Name="txtNewPass" Placeholder="New Password" IsPassword="true"></Entry>
+                    <Entry x:Name="txtNewPassConfirm" Placeholder="Confirm Password" IsPassword="true"></Entry>
+                    <Button x:Name="btnResetPassword" WidthRequest="200" Text="Change Password" Clicked="BtnResetPassword_Clicked" BackgroundColor="#0192B1" BorderWidth="-1" CornerRadius="10" TextColor="#FFFFFF"/>
+                </StackLayout>
+            </Frame>
         </StackLayout>
+            
     </ContentPage.Content>
 </ContentPage>
