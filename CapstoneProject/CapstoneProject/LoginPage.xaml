@@ -1,21 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CapstoneProject.LoginPage">
+             x:Class="CapstoneProject.CalendarPage" BackgroundColor="#FFFFFF">
     
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-                <Label Margin="0,0,0,10" Text="Login" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-
-                <Entry x:Name="txtUser" Placeholder="Username"></Entry>
-                <Entry x:Name="txtPass" Placeholder="Password" IsPassword="true"></Entry>
-
-                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                    <Button x:Name="btnLogin" WidthRequest="200" Text="Login" Clicked="BtnLogin_Clicked"/>
+            <Frame Padding="6" HeightRequest="35" BackgroundColor="#0192B1" HasShadow="False">
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="iconlistwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="BtnList_Clicked"/>
+                    <Label Text="Home" FontSize="30" HorizontalOptions="CenterAndExpand" TextColor="#FFFFFF"/>
+                    <ImageButton Source="iconcalendarwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="EndAndExpand" Clicked="BtnCalendar_Clicked"/>
                 </StackLayout>
 
-            </StackLayout>
+            </Frame>
+
+            <Frame Padding="5"  Margin="30">
+                <Entry Placeholder="Login"  FontSize="30" ClearButtonVisibility="WhileEditing" x:Name="LoginAttempt"/>
+                
+            </Frame>
+
+            <Frame Padding="5" Margin="30">
+                <Entry Placeholder="Password" FontSize="30" ClearButtonVisibility="WhileEditing" x:Name="Password attempt"/>
+            </Frame>
+
+            <Button BorderWidth="5" CharacterSpacing="2" BackgroundColor="#0192B1" Margin="50" Text="Submit" TextColor="White" FontAttributes="Bold" Font="30"  />
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

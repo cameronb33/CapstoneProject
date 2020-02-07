@@ -24,6 +24,7 @@
                 <Frame Padding="10" HasShadow="False">
                     <StackLayout HorizontalOptions="CenterAndExpand">
                         <StackLayout>
+                            <Label Text=" Date" FontSize="30" FontAttributes="Bold"  />
                             <DatePicker FontSize="Title" x:Name="DateSelected" />
                         </StackLayout>
           
