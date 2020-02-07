@@ -3,48 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CapstoneProject.NewTaskPage">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <ImageButton Source="iconlist.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnList_Clicked"/>
-                <ImageButton Source="iconcalendar.png" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Padding="5" BackgroundColor="White" Clicked="BtnCalendar_Clicked"/>
+        
+            <StackLayout>
+            <Frame Padding="6" HeightRequest="35" BackgroundColor="#0192B1" HasShadow="False">
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="iconlistwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="BtnList_Clicked"/>
+                    <Label Text="New Task" FontSize="30" HorizontalOptions="CenterAndExpand" TextColor="#FFFFFF"/>
+                    <ImageButton Source="iconcalendarwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="EndAndExpand" Clicked="BtnCalendar_Clicked"/>
+                </StackLayout>
+
+            </Frame>
+
+            <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Vertical" VerticalOptions="StartAndExpand">
+                <Frame>
+
+                </Frame>
+
+
+                <!-- Time in time out buttons/entry boxes -->
+                <Frame Padding="10" HasShadow="False">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <StackLayout>
+                            <DatePicker FontSize="Title" x:Name="DateSelected" />
+                        </StackLayout>
+          
+
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+
+                            <TimePicker AutomationProperties.Name="" Time="09:00:00" />
+                            <Button x:Name="btnStart" WidthRequest="100" Text="Start Time" BackgroundColor="#0192B1" BorderWidth="-1" CornerRadius="20" TextColor="#FFFFFF"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                            <TimePicker />
+                            <Button x:Name="btnEnd" WidthRequest="110" Text="Expected end time" BackgroundColor="#0192B1" BorderWidth="-1" CornerRadius="20" TextColor="#FFFFFF"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Add photos button -->
+                <Frame Padding="10" HasShadow="False">
+                    <Button x:Name="btnAddPhotos" WidthRequest="120" Text="Add Photos" HorizontalOptions="CenterAndExpand" BackgroundColor="#0192B1" BorderWidth="-1" CornerRadius="10" TextColor="#FFFFFF"/>
+                </Frame>
+
+                <!-- Address -->
+                <Frame Padding="10" HasShadow="False">
+                    <StackLayout >
+                        <Label Text="Address:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+                        <Label Text="" HorizontalTextAlignment="Center" FontSize="Large" BackgroundColor="#DFDEDE" HorizontalOptions="Center" WidthRequest="300" VerticalOptions="StartAndExpand" HeightRequest="80" TextColor="#000000"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Notes -->
+                <Frame Padding="10" HasShadow="False">
+                    <StackLayout>
+                        <Label Text="Notes:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                        <Label Text="Add instructions for tasks to be completed" HorizontalTextAlignment="Center" FontSize="Large" BackgroundColor="#DFDEDE" HorizontalOptions="Center" WidthRequest="300" VerticalOptions="StartAndExpand" HeightRequest="80" TextColor="#000000"/>
+                    </StackLayout>
+                </Frame>
+
+
+
+
+
             </StackLayout>
-
-            <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Vertical">
-                <Label Margin="0,0,0,10" Text="New Task" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Label Margin="0,0,0,10" Text="Name:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-                    <Entry x:Name="txtName" Placeholder="Enter Task Name"></Entry>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Label Margin="0,0,0,10" Text="Date:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-                    <Entry x:Name="txtDate" Placeholder="Enter Date"></Entry>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Label Margin="0,0,0,10" Text="Location:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-                    <Entry x:Name="txtLocation" Placeholder="Enter Address"></Entry>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Label Margin="0,0,0,10" Text="Notes:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-                    <Entry x:Name="txtNotes" Placeholder="Enter Any Notes"></Entry>
-                </StackLayout>
-
-                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                    <Label Margin="0,0,0,10" Text="Site Map:" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-                    <Button x:Name="btnSiteMap" WidthRequest="200" Text="Upload Site Map"/>
-                </StackLayout>
-                
-                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                    <Button x:Name="btnSaveTemplate" WidthRequest="200" Text="Save As Template"/>
-                </StackLayout>
-                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                    <Button x:Name="btnCreateTask" WidthRequest="200" Text="Create Task"/>
-                </StackLayout>
-
             </StackLayout>
-        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
