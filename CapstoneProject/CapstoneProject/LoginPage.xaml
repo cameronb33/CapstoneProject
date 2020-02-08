@@ -1,16 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CapstoneProject.CalendarPage" BackgroundColor="#FFFFFF">
+             x:Class="CapstoneProject.LoginPage" BackgroundColor="#FFFFFF">
     
     <ContentPage.Content>
         <StackLayout>
             <Frame Padding="6" HeightRequest="35" BackgroundColor="#0192B1" HasShadow="False">
                 <StackLayout Orientation="Horizontal">
-                    <ImageButton Source="iconlistwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="BtnList_Clicked"/>
-                    <Label Text="Home" FontSize="30" HorizontalOptions="CenterAndExpand" TextColor="#FFFFFF"/>
-                    <ImageButton Source="iconcalendarwhite.png" BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="EndAndExpand" Clicked="BtnCalendar_Clicked"/>
-                </StackLayout>
+                    <Label Text="Login" FontSize="30" HorizontalOptions="CenterAndExpand" TextColor="#FFFFFF"/>
+                  </StackLayout>
 
             </Frame>
 
@@ -23,7 +21,7 @@
                 <Entry Placeholder="Password" FontSize="30" ClearButtonVisibility="WhileEditing" x:Name="Passwordattempt"/>
             </Frame>
 
-            <Button x:Name ="SubmitAttempt" BorderWidth="5" CharacterSpacing="2" BackgroundColor="#0192B1" Margin="50" Text="Submit" TextColor="White" FontAttributes="Bold" Font="30"  />
+            <Button BorderWidth="5" CharacterSpacing="2" BackgroundColor="#0192B1" Margin="50" Text="Submit" TextColor="White" FontAttributes="Bold" Font="30"  Clicked="SubmitAttempt"/>
 
 
         </StackLayout>
