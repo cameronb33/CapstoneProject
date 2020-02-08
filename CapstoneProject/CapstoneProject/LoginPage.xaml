@@ -20,10 +20,10 @@
             </Frame>
 
             <Frame Padding="5" Margin="30">
-                <Entry Placeholder="Password" FontSize="30" ClearButtonVisibility="WhileEditing" x:Name="Password attempt"/>
+                <Entry Placeholder="Password" FontSize="30" ClearButtonVisibility="WhileEditing" x:Name="Passwordattempt"/>
             </Frame>
 
-            <Button BorderWidth="5" CharacterSpacing="2" BackgroundColor="#0192B1" Margin="50" Text="Submit" TextColor="White" FontAttributes="Bold" Font="30"  />
+            <Button x:Name ="SubmitAttempt" BorderWidth="5" CharacterSpacing="2" BackgroundColor="#0192B1" Margin="50" Text="Submit" TextColor="White" FontAttributes="Bold" Font="30"  />
 
 
         </StackLayout>

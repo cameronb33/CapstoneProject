@@ -12,9 +12,39 @@ namespace CapstoneProject
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
 	{
-		public HomePage ()
+        public IList<TaskItem> Tasks { get; private set; }
+        public HomePage ()
 		{
 			InitializeComponent();
+            Tasks = new List<TaskItem>();
+            Tasks.Add(new TaskItem
+            {
+                Location = "MacEwan",
+                Time = "8:00 AM - 9:00 AM",
+                Workers = "Brandon, Brayden"
+            });
+
+            Tasks.Add(new TaskItem
+            {
+                Location = "Edmonton",
+                Time = "9:00 AM - 9:30 AM",
+                Workers = "Brandon, Brayden"
+            });
+
+            Tasks.Add(new TaskItem
+            {
+                Location = "Windermere",
+                Time = "9:30 AM - 10:00 AM",
+                Workers = "Brandon, Brayden, John"
+            });
+
+            Tasks.Add(new TaskItem
+            {
+                Location = "Windermere",
+                Time = "10:00 AM - 10:30 AM",
+                Workers = "Brandon, Brayden"
+            });
+            BindingContext = this;
         }
 
         private async void BtnList_Clicked(object sender, EventArgs e)

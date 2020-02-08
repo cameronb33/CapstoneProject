@@ -17,7 +17,7 @@ namespace CapstoneProject
 			InitializeComponent();
         }
 
-        private async void BtnLogin_Clicked(object sender, EventArgs e)
+        private async void SubmitAttempt(object sender, EventArgs e)
         {
             App.Current.MainPage = new HomePage();
         }
